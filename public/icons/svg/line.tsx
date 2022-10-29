@@ -8,6 +8,7 @@ const Line = ({ pinked = false }) => (
       </linearGradient>
     </defs>
   </svg>
+
 )
 
 export default Line
