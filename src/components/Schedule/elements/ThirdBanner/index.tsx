@@ -89,7 +89,7 @@ const ThirdBanner = (content, data) => {
         ._btn {
           width: 100%;
           height: 3.8rem;
-          background-color: #134EBF;
+          background-color: #D480FF;
           box-sizing: border-box;
           color: #fff;
           padding: 1.8rem;

@@ -19,7 +19,7 @@ const FirstBanner = (content) => {
             <p className={styles._subtitle}>{content?.content?.subtitle}</p>
             <div className={styles._btnSuperParent}>
               <div className={styles._btnParent}>
-                <IconsButton text={content?.content?.ButtonAgenda?.text}  right={false} method={() => scrolling(buyRef)} />
+                <IconsButton pinked text={content?.content?.ButtonAgenda?.text}  right={false} method={() => scrolling(buyRef)} />
               </div>
             </div>
 

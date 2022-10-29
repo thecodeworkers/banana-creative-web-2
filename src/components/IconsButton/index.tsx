@@ -1,7 +1,7 @@
 import styles from './styles.module.scss'
 import { Line, Star, DownArrow, Linkedin } from '@icons/svg'
 
-const IconsButton = ({ text = '', method = null, icon = 'linkedin', right = true }) => {
+const IconsButton = ({ text = '', method = null, icon = 'linkedin', right = true, pinked = false }) => {
 
   const selectIcon = (icon: string) => {
     if (icon == 'star') return <Star />
@@ -10,14 +10,14 @@ const IconsButton = ({ text = '', method = null, icon = 'linkedin', right = true
 
   return (
     <div className={styles._main}>
-      <button className={styles._btn} onClick={method ? method : null}>
+      <button className={!pinked ? styles._btn : styles._btnPink} onClick={method ? method : null}>
         {/* {selectIcon(icon)} */}
         <p className={styles._text}>{text}</p>
         <div className={!right ? styles._iconParent : styles._iconParentRight}>
           <DownArrow />
         </div>
       </button>
-      <Line />
+     <Line pinked />
     </div>
   )
 }
