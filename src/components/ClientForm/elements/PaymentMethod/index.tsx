@@ -3,7 +3,7 @@ import styles from './styles.module.scss'
 import { useSelector, useDispatch } from 'react-redux'
 import { setUserData } from '@store/actions'
 
-const methods = ['Zelle', 'Pago movil', 'Efectivo', 'Transferencia']
+const methods = ['Zelle', 'Pago Móvil', 'Efectivo', 'Transferencia']
 
 const PaymentMethod = () => {
 

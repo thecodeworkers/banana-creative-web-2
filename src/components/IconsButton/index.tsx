@@ -17,7 +17,7 @@ const IconsButton = ({ text = '', method = null, icon = 'linkedin', right = true
           <DownArrow />
         </div>
       </button>
-      <Line pinked />
+      <Line pinked={pinked} />
     </div>
   )
 }
