@@ -27,12 +27,12 @@ const Confirm = () => {
   return (
     <div className={styles._main}>
       <div className={styles._content}>
-        <h1 className={styles._title}> {selectedLanguage == 'en' ? 'Hablemos por WhatsApp' : 'Talk by Whatsapp'}</h1>
-        <p className={styles._text} >{selectedLanguage == 'en' ? 'Podemos proceder a gestionar tu pago a través de una conversación con nuestro equipo de atención a clientes' : 'We can proceed to manage your payment through a conversation with our customer service team'} </p>
+        <h1 className={styles._title}> {selectedLanguage == 'en' ? 'Completa tu orden a través de WhatsApp' : 'Completa tu orden a través de WhatsApp'}</h1>
+        {/* <p className={styles._text} >{selectedLanguage == 'en' ? 'Podemos proceder a gestionar tu pago a través de una conversación con nuestro equipo de atención a clientes' : 'We can proceed to manage your payment through a conversation with our customer service team'} </p> */}
         <div className={styles._btnParent}>
           <a href={`https://wa.me/584124731515?text=¡Hola, team Banana! Me gustaría apoyar la iniciativa Agenda Una Beca. %0A%0A Mi nombre completo es: ${userData?.userData?.name} ${userData?.userData?.lastname} %0A Cédula: ${userData?.userData?.document} %0A Dirección: ${userData?.userData?.address} %0A Teléfono: ${userData?.userData?.phone} %0A Correo: ${userData?.userData?.email}  %0A Cantidad: ${scheduleNumber} Método de pago: ${userData?.userData?.paymentMethod}`}
-            target='_blank'>
-            <GeneralButton background='#FFF' text={selectedLanguage == 'en' ? 'Haz click aquí' : 'Click here'} icon={false} textColor='black' method={redirectAndSendMessage} />
+            target='_blank' rel="noreferrer">
+            <GeneralButton background='#FFF' text={selectedLanguage == 'en' ? 'Haz click aquí' : 'Haz click aquí'} icon={false} textColor='black' method={redirectAndSendMessage} />
           </a>
         </div>
       </div>
