@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styles from './styles.module.scss'
 import { useSelector, useDispatch } from 'react-redux'
 import { setUserData } from '@store/actions'
@@ -23,10 +23,12 @@ const PaymentMethod = () => {
     setCurrentDelivery(index)
   }
 
+  useEffect(() => {
+    selectedDelivery('Pick-up: Torre IASA, La Castellana, Caracas', 0)
+  }, [])
+
   return (
     <div className={styles._mainContainer}>
-
-
       <div className={styles._sidesContainer}>
         <div className={styles._content}>
           <h1 className={styles._title}> Forma de pago </h1>
