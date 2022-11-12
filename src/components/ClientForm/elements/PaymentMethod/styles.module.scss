@@ -1,3 +1,5 @@
+@import '@styles/index.scss';
+
 @mixin card($background) {
   padding: 1.3rem;
   background-color: $background;
@@ -96,4 +98,20 @@
   flex-direction: column;
   width: 48%;
   justify-content: flex-start;
+}
+
+@include responsive(md) {
+
+._sidesContainer{
+  flex-direction: column;
+}
+
+._content{
+  width: 100%;
+}
+
+._contentRight{
+  width: 100%;
+}
+
 }
