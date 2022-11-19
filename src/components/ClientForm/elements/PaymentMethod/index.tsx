@@ -46,7 +46,7 @@ const PaymentMethod = () => {
           {
             deliveryMethod.map((item, index) => (
               <div className={currentDelivery == index ? styles._cardSelected : styles._card}
-               key={index} onClick={() => selectedDelivery(item, index)}>
+                key={index} onClick={() => selectedDelivery(item, index)}>
                 <div className={currentDelivery == index ? styles._circleSelected : styles._circle}>
                   <div className={currentDelivery == index ? styles._childCircleSelected : styles._childCircle}>
                   </div>
