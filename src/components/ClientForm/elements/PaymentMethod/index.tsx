@@ -23,10 +23,6 @@ const PaymentMethod = () => {
     setCurrentDelivery(index)
   }
 
-  useEffect(() => {
-    selectedDelivery('Pick-up: Torre IASA, La Castellana, Caracas', 0)
-  }, [])
-
   return (
     <div className={styles._mainContainer}>
       <div className={styles._sidesContainer}>
@@ -43,14 +39,14 @@ const PaymentMethod = () => {
               </div>
             ))
           }
-
         </div>
 
         <div className={styles._contentRight}>
           <h1 className={styles._title}> Forma de Entrega </h1>
           {
             deliveryMethod.map((item, index) => (
-              <div className={currentDelivery == index ? styles._cardSelected : styles._card} key={index} onClick={() => selectedDelivery(item, index)}>
+              <div className={currentDelivery == index ? styles._cardSelected : styles._card}
+               key={index} onClick={() => selectedDelivery(item, index)}>
                 <div className={currentDelivery == index ? styles._circleSelected : styles._circle}>
                   <div className={currentDelivery == index ? styles._childCircleSelected : styles._childCircle}>
                   </div>
@@ -59,9 +55,7 @@ const PaymentMethod = () => {
               </div>
             ))
           }
-
         </div>
-
       </div>
     </div>
   )
