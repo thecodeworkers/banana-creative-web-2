@@ -6,7 +6,6 @@ import { setStatus } from '@store/actions'
 import { useSelector } from 'react-redux'
 
 const Portfolio = () => {
-
   const dispatch = useDispatch()
   const { project } = useSelector((state: any) => state)
 

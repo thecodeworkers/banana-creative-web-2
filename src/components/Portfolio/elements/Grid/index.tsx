@@ -4,7 +4,7 @@ import styles from './styles.module.scss'
 import Image from 'next/image'
 import { useSelector } from 'react-redux'
 import { fallbackRestUrl, paginate, scrollTo } from '@utils'
-import { Pagination } from '@components'
+import { Pagination, ScrollToTop } from '@components'
 
 const perPage = 12
 
@@ -60,8 +60,23 @@ const Grid = (content) => {
     scrollTo(null, 0, true)
   }
 
+  const handleScroll = () => {
+    if (window.scrollY > 800 && window.scrollY < 50000) {
+      setTmpAllProjects(p => [...p, ...tmpAllProjects])
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <div className={styles._main}>
+      <ScrollToTop />
       <div className={styles._filters}>
         <ul className={styles._list}>
           {
